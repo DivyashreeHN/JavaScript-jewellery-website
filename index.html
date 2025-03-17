@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Haven</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="logo.jpg" alt="Luxe Jewels Logo" class="logo-img">
+            </div>
+
+            <!-- Search Bar Section -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search Jewelry..." id="search-input">
+            </div>
+
+            <!-- Cart & Wishlist Section -->
+            <div class="cart-wishlist">
+                <button onclick="viewCart()">Cart 🛒0</button>
+                <button onclick="viewWishlist()">Wishlist❤️</button>
+            </div>
+        </div>
+
+        <!-- Navigation Links Section (Categories) -->
+        <nav class="categories">
+            <!-- <a href="#" onclick="filterByCategory('all')">All</a> -->
+            <a href="#" onclick="filterByCategory('rings')">Rings</a>
+            <a href="#" onclick="filterByCategory('earrings')">Earrings</a>
+            <a href="#" onclick="filterByCategory('necklaces')">Necklaces</a>
+            <a href="#" onclick="filterByCategory('studs')">Studs</a>
+            <a href="#" onclick="filterByCategory('bracelets')">Bracelets</a>
+            <a href="#" onclick="filterByCategory('bangles')">Bangles</a>
+            <a href="#" onclick="filterByCategory('anklets')">Anklets</a>
+            <a href="#" onclick="filterByCategory('pendants')">Pendants</a>
+        </nav>
+    </header>
+
+    <!-- Main Section (Product Display) -->
+    <main>
+        <div class="product-list">
+            <!-- Product 1: Diamond Necklace (Category: necklaces) -->
+            <div class="product" data-category="necklaces">
+                <div class="product-image">
+                    <img src="necklace.jpg" alt="Diamond Necklace">
+                </div>
+                <h3>Diamond Necklace</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('Diamond Necklace', 500)">Add to Cart</button>
+                <button onclick="addToWishlist('Diamond Necklace')">❤️</button>
+            </div>
+            <div class="product" data-category="necklaces">
+                <div class="product-image">
+                    <img src="necklace2.jpg" alt="gold Necklace">
+                </div>
+                <h3>gold Necklace</h3>
+                <p>₹700</p>
+                <button onclick="addToCart('gold Necklace', 700)">Add to Cart</button>
+                <button onclick="addToWishlist('gold Necklace')">❤️</button>
+            </div>
+            <div class="product" data-category="necklaces">
+                <div class="product-image">
+                    <img src="necklace3.jpg" alt="Necklace">
+                </div>
+                <h3> Necklace</h3>
+                <p>₹600</p>
+                <button onclick="addToCart(' Necklace', 600)">Add to Cart</button>
+                <button onclick="addToWishlist(' Necklace')">❤️</button>
+            </div>
+
+            <!-- Product 2: Gold Ring (Category: rings) -->
+            <div class="product" data-category="rings">
+                <img src="ring.jpg" alt="Gold Ring">
+                <h3>Gold Ring</h3>
+                <p>₹300</p>
+                <button onclick="addToCart('Gold Ring', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('Gold Ring')">❤️</button>
+            </div>
+
+
+            <div class="product" data-category="studs">
+                <img src="stud1.jpg" alt="stud">
+                <h3>stud</h3>
+                <p>₹300</p>
+                <button onclick="addToCart('stud', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('stud Ring')">❤️</button>
+            </div>
+
+            <div class="product" data-category="studs">
+                <img src="stud2.jpg" alt="stud">
+                <h3>Rose Stud earrings</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('Rose stud', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('stud Ring')">❤️</button>
+            </div>
+            <div class="product" data-category="bracelets">
+                <img src="bracelet1.jpg" alt="bracelet">
+                <h3>Gold Bracelet</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('bracelet', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('bracelet')">❤️</button>
+            </div>
+            <div class="product" data-category="bracelets">
+                <img src="bracelet2.jpg" alt="bracelet">
+                <h3> Bracelet</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('bracelet', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('bracelet')">❤️</button>
+            </div>
+
+            <div class="product" data-category="bangles">
+                <img src="bangles1.jpg" alt="bangles">
+                <h3>Gold Bangles</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('bangles', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('bangles')">❤️</button>
+            </div>
+
+            <div class="product" data-category="anklets">
+                <img src="anklets1.jpg" alt="anklets">
+                <h3>Anklets</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('anklets', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('anklets')">❤️</button>
+            </div>
+
+            <div class="product" data-category="pendants">
+                <img src="pendant1.jpg" alt="pendants">
+                <h3>Pendants</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('pendants', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('pendants')">❤️</button>
+            </div>
+            <div class="product" data-category="pendants">
+                <img src="pendant2.jpg" alt="pendants">
+                <h3>Pendants</h3>
+                <p>₹500</p>
+                <button onclick="addToCart('pendants', 300)">Add to Cart</button>
+                <button onclick="addToWishlist('pendants')">❤️</button>
+            </div>
+            <!-- Product 3: Silver Earrings (Category: earrings) -->
+            <div class="product" data-category="earrings">
+                <img src="earrings.jpg" alt="Silver Earrings">
+                <h3>Silver Earrings</h3>
+                <p>₹150</p>
+                <button onclick="addToCart('Silver Earrings', 150)">Add to Cart</button>
+                <button onclick="addToWishlist('Silver Earrings')">❤️</button>
+            </div>
+
+            <!-- Add more products with different categories and images here -->
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: <span id="cart-total">0</span></p>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlist-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Wishlist</h2>
+            <div id="wishlist-items"></div>
+            <button onclick="closeWishlist()">Close</button>
+        </div>
+    </div>
+
+    
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>About</h3>
+            <p>We are a premier jewelry store offering the finest collection of rings, necklaces, earrings, and more. Explore our exquisite designs to find the perfect piece for every occasion.</p>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: support@jewelryhaven.com</p>
+            <p>Phone: 91+ 8884654234</p>
+            <p>Address: Mysore- 571427, Vijayanagar 3rd Stage</p>
+        </div>
+
+        <!-- Social Links Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank">Facebook 📱</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram 📸</a>
+                
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Jewelry Haven. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
