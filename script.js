@@ -112,6 +112,70 @@ document.getElementById('search-input').addEventListener('input', function() {
     searchProducts(query);
 });
 
+// Function to handle Quick Checkout button click
+function quickCheckout(productName) {
+    const product = cart.find(item => item.name === productName);
+    if (product) {
+        openLoginModal(productName);
+    }
+}
+
+// Function to open the Login Modal
+function openLoginModal(productName) {
+    const loginModal = document.getElementById("login-modal");
+    loginModal.style.display = "flex";
+    // You can store the product name or pass it to the next step
+    sessionStorage.setItem('quickCheckoutProduct', productName);
+}
+
+// Function to close the Login Modal
+function closeLoginModal() {
+    const loginModal = document.getElementById("login-modal");
+    loginModal.style.display = "none";
+}
+
+// Function to submit the mobile number and apply 10% discount
+function submitMobileNumber() {
+    const mobileNumber = document.getElementById('mobile-number').value;
+    if (!mobileNumber || isNaN(mobileNumber) || mobileNumber.length < 10) {
+        alert("Please enter a valid mobile number.");
+        return;
+    }
+
+    // Get the product name from sessionStorage (saved from quickCheckout)
+    const productName = sessionStorage.getItem('quickCheckoutProduct');
+    const product = cart.find(item => item.name === productName);
+    const discount = 0.1; // 10% discount
+    const discountedPrice = product.price * (1 - discount);
+    alert(`You entered: ${mobileNumber}\nYou get a 10% discount! The discounted price is ₹${discountedPrice.toFixed(2)}`);
+
+    // Close the modal after successful submission
+    closeLoginModal();
+}
+
+// Add Quick Checkout Button to each product in the cart
+function viewCart() {
+    const cartModal = document.getElementById("cart-modal");
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const itemDiv = document.createElement("div");
+        itemDiv.innerHTML = `${item.name} - ₹${item.price} x ${item.quantity} = ₹${item.price * item.quantity} 
+        <button onclick="removeFromCart(${index}, '${item.name}')">Remove</button>
+        <button onclick="quickCheckout('${item.name}')">Quick Checkout</button>`;
+        cartItems.appendChild(itemDiv);
+        total += item.price * item.quantity;
+    });
+
+    cartTotal.innerText = total;
+    cartModal.style.display = "flex";
+}
+
+
 function searchProducts(query) {
     const products = document.querySelectorAll('.product'); // Get all products
     products.forEach(product => {
