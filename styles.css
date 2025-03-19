@@ -267,3 +267,273 @@ button {
 /* button:hover {
     background-color: #ea236f;
 } */
+
+/* styles.css */
+/* Default Styles (Desktop) */
+.red-box {
+    background-color: rgb(191, 51, 51);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text-with-line {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text-with-line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 38%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 25%;
+    border-bottom: 4px solid white;
+}
+
+.additional-text {
+    font-family: serif;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: normal;
+}
+
+.additional-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #e8edf4;
+    color: rgb(68, 66, 66);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 14%;
+}
+
+/* More Info Container */
+.more-info-container {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f65b19;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+}
+
+.info-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 10px;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 12px;
+}
+
+.text-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    font-weight: normal;
+}
+
+/* Media Queries */
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .red-box {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .text-with-line {
+        font-size: 14px;
+        padding-bottom: 8px;
+    }
+
+    .text-with-line::after {
+        width: 50%;
+        left: 25%;
+    }
+
+    .additional-text {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .additional-button {
+        width: 80%; /* Makes the button wider on mobile */
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+
+    .more-info-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .image-container {
+        flex: none;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .info-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .text-container {
+        font-size: 24px;
+        padding-left: 0;
+    }
+
+    .text-container p {
+        font-size: 14px;
+        margin-right: 0;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .red-box {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .text-with-line {
+        font-size: 15px;
+        padding-bottom: 9px;
+    }
+
+    .text-with-line::after {
+        width: 40%;
+        left: 30%;
+    }
+
+    .additional-text {
+        font-size: 13px;
+    }
+
+    .additional-button {
+        width: 70%; /* Makes the button a bit smaller on tablets */
+    }
+
+    .more-info-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .image-container {
+        flex: none;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .info-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .text-container {
+        font-size: 32px;
+        padding-left: 0;
+    }
+
+    .text-container p {
+        font-size: 15px;
+        margin-right: 0;
+    }
+}
+
+/* Desktop (min-width: 769px) */
+@media screen and (min-width: 769px) {
+    .red-box {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .text-with-line {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .text-with-line::after {
+        width: 25%;
+        left: 38%;
+    }
+
+    .additional-text {
+        font-size: 14px;
+    }
+
+    .additional-button {
+        width: 14%;
+    }
+
+    .more-info-container {
+        flex-direction: row;
+        height: 100vh;
+        padding: 0px;
+    }
+
+    .image-container {
+        flex: 1;
+        padding-right: 10px;
+        height: 100%;
+    }
+
+    .info-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px;
+    }
+
+    .text-container {
+        flex: 1;
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+        margin-right: 100px;
+    }
+}
+
+  /* Flexbox Layout */
+  
