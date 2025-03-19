@@ -195,55 +195,53 @@ function searchProducts(query) {
 let name = document.getElementsByTagName('main')[0];
 let container = document.createElement('div');
 
-// Create a span for the text with a line
+//  span for the text 
 let textWithLine = document.createElement('span');
 textWithLine.classList.add('text-with-line');
 textWithLine.textContent = 'THIS WOMEN’S DAY, IT’S ALL ABOUT YOU!';
 
-// Add the text-with-line span inside the container
+// 
 container.classList.add('red-box');
 container.appendChild(textWithLine);
 
-// Create the additional text
+//  additional text
 let additionalText = document.createElement('span');
 additionalText.classList.add('additional-text');
 additionalText.textContent = 'Get Ready for Unbeatable Deals: Enjoy Special Offers Upto 50% - Shop Now!';
 
-// Add the additional text span inside the container
+// 
 container.appendChild(additionalText);
 
-// Create the additional button
+// additional button
 let additionalButton = document.createElement('button');
 additionalButton.classList.add('additional-button');  // Proper class name
 additionalButton.textContent = 'LEARN MORE';
 
-// Add the button inside the container
+// 
 container.appendChild(additionalButton);
 
-// Insert the div before the footer element
+//  div before the footer element
 container.style.marginTop = '50px';
 name.insertAdjacentElement('beforebegin', container);
 
-// Handle button click event to show more information
-additionalButton.addEventListener('mouseover', function() {
-  // Check if the container already exists to avoid creating it multiple times
-  if (document.querySelector('.more-info-container')) return; // Prevent duplicate containers
+// 
+
   
-  // Create the new container for the image and text
+  // 
   let name1 = document.getElementsByTagName('footer')[0];
   let moreInfoContainer = document.createElement('div');
   moreInfoContainer.classList.add('more-info-container');
   
-  // Create the image side (left side of the container)
+  //  the image side (left side of the container)
   let imageContainer = document.createElement('div');
   imageContainer.classList.add('image-container');
   let image = document.createElement('img');
-  image.src = 'logo.jpg';  // Placeholder image, change the source as needed
+  image.src = 'logo.jpg';  
   image.alt = 'Scholarship Image';
   image.classList.add('info-image');
   imageContainer.appendChild(image);
   
-  // Create the text side (right side of the container)
+  //  the text side (right side of the container)
   let textContainer = document.createElement('div');
   textContainer.classList.add('text-container');
   
@@ -266,13 +264,13 @@ additionalButton.addEventListener('mouseover', function() {
   text4.textContent = 'Don’t wait too long to take advantage of these unbeatable offers! With the perfect blend of elegance and style, our jewelry collections are the ultimate way to celebrate Women’s Day. Visit our store or shop online now to find the perfect piece for you or someone special. Make this Women’s Day truly unforgettable with the gift of timeless jewelry.';
   textContainer.appendChild(text4);
 
-  // Append the image and text side into the new container
+  // 
   moreInfoContainer.appendChild(imageContainer);
   moreInfoContainer.appendChild(textContainer);
   
-  // Insert the new container into the page
+  // 
   name1.insertAdjacentElement('beforebegin', moreInfoContainer);
   
-  // Ensure the container is displayed as a flexbox layout
+  // 
   moreInfoContainer.style.display = 'flex';
-});
+

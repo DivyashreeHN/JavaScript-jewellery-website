@@ -366,9 +366,9 @@ button {
     font-weight: normal;
 }
 
-/* Media Queries */
 
-/* Mobile (max-width: 480px) */
+
+/* Mobile  */
 @media screen and (max-width: 480px) {
     .red-box {
         font-size: 14px;
@@ -426,7 +426,7 @@ button {
     }
 }
 
-/* Tablets (max-width: 768px) */
+/* ta*/
 @media screen and (max-width: 768px) {
     .red-box {
         font-size: 15px;
@@ -448,7 +448,7 @@ button {
     }
 
     .additional-button {
-        width: 70%; /* Makes the button a bit smaller on tablets */
+        width: 70%; 
     }
 
     .more-info-container {
@@ -481,7 +481,7 @@ button {
     }
 }
 
-/* Desktop (min-width: 769px) */
+/* Desktop  */
 @media screen and (min-width: 769px) {
     .red-box {
         font-size: 16px;
