@@ -271,6 +271,7 @@ button {
 /* styles.css */
 /* Default Styles (Desktop) */
 /* Default Styles (Desktop) */
+/* Default Styles (Desktop) */
 .red-box {
     background-color: rgb(191, 51, 51);
     color: white;
@@ -393,15 +394,6 @@ button {
         width: 80%; /* Makes the button wider on mobile */
         margin-top: 10px;
         padding: 10px 20px;
-        background-color: #e8edf4 !important;  /* Explicit background color */
-        color: rgb(68, 66, 66) !important; /* Explicit text color */
-    }
-
-    .additional-button:hover,
-    .additional-button:focus,
-    .additional-button:active {
-        background-color: #e8edf4 !important; /* Ensures no color change on hover/focus */
-        color: rgb(68, 66, 66) !important;
     }
 
     .more-info-container {
@@ -543,7 +535,6 @@ button {
         font-size: 16px;
         margin-right: 100px;
     }
-}
-
+} 
   /* Flexbox Layout */
   
