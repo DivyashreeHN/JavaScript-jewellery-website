@@ -10,6 +10,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    /* padding: 0 20px; */
 }
 
 /* Header Styling */
@@ -53,7 +54,7 @@ header {
 }
 
 .cart-wishlist button {
-    background-color: rgb(117, 4, 46); /* Gold */
+    background-color: rgb(150, 10, 61); /* Gold */
     color: white;
     padding: 9px 19px;
     border: none;
@@ -129,7 +130,7 @@ nav.categories a {
 }
 
 button {
-    background-color: #D4AF37;
+    background-color: #9a115f;
     color: white;
     padding: 10px;
     border: none;
@@ -196,7 +197,7 @@ footer {
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #f1c40f;
+    color: #780e71;
 }
 
 .footer-section p {
@@ -230,19 +231,49 @@ footer {
 /* Mobile devices */
 @media (max-width: 600px) {
     .header-container {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+       
+    }
+
+    .logo-img {
+        width: 80px; /* Adjust logo size */
+        margin-bottom: 10px; /* Space between logo and search bar */
+    }
+
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .search-bar input {
-        width: 100%;
+        width: 90%; /* Full width with a bit of margin */
+        max-width: 100%;
         margin-bottom: 10px;
     }
 
     .cart-wishlist {
-        flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 10px;
+    }
+
+    .cart-wishlist button {
+        flex: 1;
+        text-align: center;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .wishlist {
+        flex: 1;
+        text-align: center;
     }
 
     .product-list {
@@ -275,6 +306,7 @@ footer {
     .header-container {
         flex-direction: column;
         align-items: flex-start;
+        
     }
 
     .search-bar input {
@@ -346,7 +378,7 @@ button:hover {
 
 /* Additional Styles */
 .red-box {
-    background-color: rgb(191, 51, 51);
+    background-color: rgb(124, 13, 13);
     color: white;
     padding: 10px;
     border-radius: 5px;
